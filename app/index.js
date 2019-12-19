@@ -1,14 +1,23 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
-import {createAppContainer, createSwitchNavigator} from 'react-navigation';
+import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
+import WelcomeView from './WelcomeView/index';
+import StartView from './StartView/index';
+
+const StackNavigator = createStackNavigator(
+  {
+    Welcome: {screen: WelcomeView},
+    Start: {screen: StartView},
+  },
+  {
+    initialRouteName: 'Welcome',
+  },
+);
+
+const AppContainer = createAppContainer(StackNavigator);
 
 export default class Root extends React.Component {
   render() {
-    return (
-      <SafeAreaView>
-        <Text>Welcome TomatoRN</Text>
-      </SafeAreaView>
-    );
+    return <AppContainer />;
   }
 }
