@@ -36,6 +36,8 @@ export default StyleSheet.create({
   },
   buttonTitle: {
     color: '#FFFFFF',
-    // textAlign: 'center',
+  },
+  image: {
+    alignItems: 'center',
   },
 });

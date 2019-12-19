@@ -5,6 +5,8 @@ import {
   TextInput,
   TouchableOpacity,
   Alert,
+  View,
+  Image,
 } from 'react-native';
 import styles from './styles';
 
@@ -69,7 +71,7 @@ export default class WelcomeView extends React.Component {
           style={styles.textInputContainer}
           placeholder="Study Level"
           keyboardType="number-pad"
-          value={level}
+          value={level.toString()}
           onChangeText={this.inputLevel}
         />
         <TouchableOpacity
@@ -77,6 +79,16 @@ export default class WelcomeView extends React.Component {
           onPress={this.onPressButton}>
           <Text style={styles.buttonTitle}>Let’s go !</Text>
         </TouchableOpacity>
+        <View style={styles.image}>
+          <Image
+            source={{uri: 'app_icon.png'}}
+            style={{width: 95, height: 110}}
+          />
+          <Image
+            source={{uri: 'notebook-of-spring-with-lines-page.png'}}
+            style={{width: 31, height: 36}}
+          />
+        </View>
       </SafeAreaView>
     );
   }
