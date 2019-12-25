@@ -2,6 +2,8 @@ import React from 'react';
 import {SafeAreaView, Text, ImageBackground} from 'react-native';
 import styles from './styles';
 
+const ovalIcon = require('../../assets/Oval.png');
+
 export default class StartView extends React.Component {
   static navigationOptions = {
     title: 'StartView',
@@ -48,7 +50,7 @@ export default class StartView extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <ImageBackground
-          source={{uri: 'Oval.png'}}
+          source={ovalIcon}
           style={styles.image}
           resizeMode="contain">
           <Text style={styles.number}>{this.state.counter}</Text>
