@@ -10,6 +10,9 @@ import {
 } from 'react-native';
 import styles from './styles';
 
+const appIcon = require('../../assets/app_icon.png');
+const noteBookIcon = require('../../assets/notebook-of-spring-with-lines-page.png');
+
 export default class WelcomeView extends React.Component {
   static navigationOptions = {
     title: 'WelcomeView',
@@ -80,14 +83,8 @@ export default class WelcomeView extends React.Component {
           <Text style={styles.buttonTitle}>Let’s go !</Text>
         </TouchableOpacity>
         <View style={styles.image}>
-          <Image
-            source={{uri: 'app_icon.png'}}
-            style={{width: 95, height: 110}}
-          />
-          <Image
-            source={{uri: 'notebook-of-spring-with-lines-page.png'}}
-            style={{width: 31, height: 36}}
-          />
+          <Image source={appIcon} style={{width: 95, height: 110}} />
+          <Image source={noteBookIcon} style={{width: 31, height: 36}} />
         </View>
       </SafeAreaView>
     );
