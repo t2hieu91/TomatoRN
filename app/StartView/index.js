@@ -42,7 +42,7 @@ export default class StartView extends React.Component {
   };
 
   gotoNextScreen = () => {
-    this.props.navigation.push('SlideMenu');
+    this.props.navigation.push('SideMenu');
   };
 
   render() {

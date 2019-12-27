@@ -29,4 +29,8 @@ export default StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  menuIcon: {
+    width: 32,
+    height: 32,
+  },
 });
