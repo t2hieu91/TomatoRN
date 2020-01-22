@@ -4,7 +4,7 @@ import {
   Text,
   View,
   Image,
-  TouchableHighlight,
+  TouchableOpacity,
   Alert,
 } from 'react-native';
 import styles from './styles';
@@ -41,16 +41,16 @@ export default class LearnTestView extends React.Component {
           <RankView />
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableHighlight
+          <TouchableOpacity
             style={styles.notLearnContainer}
             onPress={this._onPressNotLearnButton}>
             <Text style={styles.description}>Not learned(51)</Text>
-          </TouchableHighlight>
-          <TouchableHighlight
+          </TouchableOpacity>
+          <TouchableOpacity
             style={styles.weakContainer}
             onPress={this._onPressWeakButton}>
             <Text style={styles.description}>Weak(25)</Text>
-          </TouchableHighlight>
+          </TouchableOpacity>
         </View>
       </SafeAreaView>
     );

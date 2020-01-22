@@ -1,4 +1,6 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
+
+const deviceWidth = Dimensions.get('window').width;
 
 export default StyleSheet.create({
   container: {
@@ -6,10 +8,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#FFFFFF',
-    borderWidth: 1,
-    borderColor: 'gray',
-    width: 300,
+    width: deviceWidth - 80,
   },
   textContainer: {
     flexDirection: 'column',

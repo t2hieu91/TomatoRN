@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableHighlight, Image, Alert} from 'react-native';
+import {View, Text, TouchableOpacity, Image, Alert} from 'react-native';
 import styles from './styles';
 
 const leftOnIcon = require('../../../assets/left_on.png');
@@ -16,20 +16,20 @@ export default class RankView extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableHighlight
+        <TouchableOpacity
           style={styles.leftContainer}
           onPress={this._onPressLeftButton}>
           <Image style={styles.icon} source={leftOffIcon} />
-        </TouchableHighlight>
+        </TouchableOpacity>
         <View style={styles.textContainer}>
           <Text style={styles.description}>Rank 1</Text>
           <Text style={styles.subDescription}>1/16</Text>
         </View>
-        <TouchableHighlight
+        <TouchableOpacity
           style={styles.rightContainer}
           onPress={this._onPressRightButton}>
           <Image style={styles.icon} source={rightOnIcon} />
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     );
   }
